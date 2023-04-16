@@ -1,0 +1,13 @@
+jumps = 0
+farthest = 0
+end = length(arr) - 1
+
+for i from 0 to end:
+    if i > farthest:
+        return -1
+    farthest = max(farthest, i + arr[i])
+    if farthest >= end:
+        return jumps + 1
+    if i == farthest:
+        return -1
+    jumps = jumps + 1
